@@ -1,0 +1,431 @@
+/* start var */
+:root{
+    --main-color: #10cab7;
+    --head-color: #2c4755;
+    --back-color:#f6f6f6;
+}
+/* end var */
+
+/* Start glouble ruels */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.special-head{
+    text-align: center;
+    font-size: 100px;
+    margin: 0;
+    color:#ebeced;
+    letter-spacing: -3px;
+}
+.special-p{
+    color: #bfbebe;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: -30px;
+}
+
+@media(max-width:767px){
+    .special-head{
+        font-size: 60px;
+    }
+    .special-p{
+        margin-top: -20px;
+    }
+}
+
+.containar{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left:15px ;
+    padding-right: 15px;
+}
+
+@media (min-width:768px){
+    .containar{
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px){
+    .containar{
+        width: 970px;
+    }
+}
+
+@media (min-width : 1200px) {
+    .containar{
+        width: 1170px;
+    }
+}
+/* End globals rules */
+/* startheader */
+.header{
+    padding: 20px;
+}
+.header .containar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo{
+    width: 60px;
+}
+
+.header .links{
+    position: relative;
+}
+
+.header .links .icons{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header .links .icons span{
+    background-color: #222;
+    height: 2px;
+    margin-bottom: 5px;
+
+}
+
+.header .links .icons span:first-child{
+    width: 100%;
+}
+
+.header .links .icons span:nth-child(2){
+    width: 60%;
+}
+
+.header .links .icons span:last-child{
+    width: 100%;
+}
+.header .containar .links ul{
+    list-style: none;
+    min-width: 200px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    display: none;
+    background-color: var(--back-color);
+}
+.header .containar .links:hover ul{
+    display: block;
+}
+
+.header .containar .links ul::before{
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: -20px;
+    border-width: 10px ;
+    border-color: transparent transparent var(--back-color) transparent;
+    border-style: solid;
+}
+.header .containar .links a{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 15px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.header .containar .links a:hover{
+    padding-left: 25px;
+}
+.header .containar .links ul li:not(:last-child) a {
+    border-bottom: solid 1px #ddd;
+}
+/* endheader */
+/* :start landing */
+.landing{
+    background-image: url(../images/686998.webp);
+    background-size: cover;
+    height: calc(100vh - 64px);
+}
+.landing .text-intro h1{
+    margin: 0;
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.landing .text-intro p{
+    color: var(--head-color);
+    line-height: 1.7;
+}
+
+.landing .text-intro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%); 
+    text-align: center;
+    max-width: 100%; /*to prevent content go out fro m the the screen */
+    width: 300px;
+}
+/* :end landing */
+/* start feuters  */
+.feuters{
+   padding-top: 60px;
+   padding-bottom: 60px;
+   background-color: var(--back-color);
+}
+
+.feuters .containar{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feuters .containar .feut{
+    text-align: center;
+    padding: 20px;
+}
+
+.feuters .containar .feut h3{
+    font-weight: 800;
+    color: #2c4755;
+    text-transform: capitalize;
+}
+
+.feuters .containar .feut p{
+    line-height: 1.7;
+    color: #575757;
+}
+
+.feuters .containar .feut i{
+    color: var(--main-color);
+}
+/* end feuters  */
+/* start services */
+.services{
+    padding-top: 60px;
+    padding-bottom: 60px    
+}
+.services .containar .serv-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 100px;
+}
+.services .containar .serv-content .surv{
+    display: flex;
+    margin-bottom: 40px;
+}
+@media(max-width:767px){
+.services .containar .serv-content .surv{
+    text-align: center;
+    flex-direction: column;
+}
+}
+.services .containar .serv-content .surv i{
+    flex-basis: 60px;
+    color: var(--main-color);
+}
+.services .containar .serv-content .surv .text{
+    flex :1;    
+}
+.services .containar .serv-content .surv .text h3{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.services .containar .serv-content .surv .text p{
+    line-height: 1.7;
+    color: #575757;
+}
+.services .containar .serv-content .images{
+    position: relative;
+    text-align: center;
+}
+.services .containar .serv-content .images::before{
+    content: "";
+    background-color: var(--head-color);
+    top: -50px;
+    width: 100px;
+    height: calc(80% + 100px);
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+.services .containar .serv-content .images img{
+    width: 260px;
+    height: 80%;
+}
+@media(max-width:1199px){
+    .mountain-image{
+        display: none;
+    }
+}
+/* end services */
+/* start protofile */
+.protofile{
+    background-color: var(--back-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.proto-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 100px;
+    gap:30px;
+}
+.proto-content .col{
+    background-color: white;
+    position: relative;
+}
+
+.proto-content .col .text{
+    padding: 20px;
+}
+
+.proto-content .col .images img{
+    width: 100%;
+    height: 300px;
+}
+
+.proto-content .col .text h3{
+    font-weight: 800;
+    margin: 0;
+}
+
+.proto-content .col .text p{
+    font-weight: 400;
+    color: #575757;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+/* end protofile */
+/* start about */
+.about{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.about-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(450px , 1fr) );
+    margin-top: 100px;
+}
+.about-content .card h3 {
+    line-height: 1.7;
+    color: var(--head-color);
+    margin-top:0 ;
+}
+.about-content .card p {
+    line-height: 1.7;
+    color: #575757;
+    margin-bottom: 0;
+}
+.about-content .card span{
+    background-color: var(--main-color);
+    width: 200px;
+    height: 2px;
+    display: block;
+}
+.about-content .images{
+    position: relative;
+}
+.about-content .images::before{
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 60px;
+    height: 205px;
+    z-index: -1;
+    left: 185px;
+    top: -20px;
+}
+.about-content .images::after{
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    z-index: -1;
+    height: 60px;
+    width: 120px;
+    top: 130px;
+    left: 185px;
+}
+@media(max-width:990px){
+    .about-content .images::after,
+    .about-content .images::before{
+        display: none; 
+    }
+    .about-content .images{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .about-content .card p,
+    .about-content .card h3{
+        text-align: center;
+    }
+}
+/* end about */
+/* start contact */
+.contact{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--back-color);
+}
+.contact .contact-text{
+    margin: 100px auto 0;
+    width:600px;
+}
+.contact .contact-text h2{
+    font-weight: 800;
+    color: var(--head-color);
+    font-size: 30px;
+    margin: 0 0 0;
+}
+.contact .contact-text h3{
+    font-weight: 800;
+    color: var(--main-color);
+    font-size: 27px;
+    margin-left: 20px;
+   
+}
+.brands{
+    display: inline-block;
+}
+.brands i{
+    margin-left: 12px;
+}
+.contact .contact-text .social{
+    margin-left: 60px;
+}
+.contact .contact-text .social span{
+    font-size: 10px;
+}
+/* end contact */
+/* start footer */
+.footer{
+   background-color: var(--head-color);
+}
+.footer .containar{
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: 800;
+
+}
+.footer .containar span{
+    color: var(--main-color)
+}
+
+/* end footer */
